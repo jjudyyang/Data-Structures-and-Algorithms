@@ -1,19 +1,23 @@
-class Solution(object):
-    def twoSum(self, nums, target):
-        """
-        :type nums: List[int]
-        :type target: int
-        :rtype: List[int]
-        """
-        hashMap = {
-             
-        } # mapping value : index
+class Solution:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        dictionary = {}
         
-        i = 0;
-        while(i < len(nums)):
-            difference = target - nums[i]
-            if difference in hashMap:
-                return[hashMap[difference], i]
+        #keys: values 
+        #list numbers : index of number
+        
+        length = len(nums)
+        
+        for index in range(length):
+            search = target - nums[index]
+            if search in dictionary:
+                # yay we found it 
+                return [index, dictionary[search]]
+            #if not in the dictonary, add it to the dictionary 
+            dictionary[nums[index]] = index
             
-            hashMap[nums[i]] = i # add to hashmap if does not exist 
-            i+=1
+        
+    
+        
+        
+            
+        

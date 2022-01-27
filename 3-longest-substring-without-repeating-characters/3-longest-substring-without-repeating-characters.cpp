@@ -25,9 +25,6 @@ public:
             if(result < right - left + 1 ){
                 result = right - left + 1;
             }
-            else{
-                
-            }
             right++;
             
         }
